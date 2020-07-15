@@ -1,0 +1,239 @@
+// ---------------------------------------------------------- mixins ------------------------
+// ========================================================== / mixins ======================
+// ---------------------------------------------------------- variables ---------------------
+$main_font: 'Open Sans',
+sans-serif;
+// ========================================================== / variables ===================
+// ---------------------------------------------------------- commons -----------------------
+// ========================================================== / commons =====================
+body {
+    font-family: $main_font;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.section_title {
+    font-size: 50px;
+    line-height: 66px;
+    color: #B31217;
+    font-weight: 700;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+.main_btn {
+    display: inline-block;
+    padding: 16px 48px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+    border-radius: 5px;
+}
+
+// ---------------------------------------------------------- section_intro -----------------
+.section_intro {
+    padding-top: 0;
+    background: url(../assets/img/banner.jpg) no-repeat 0% 100%;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menu {
+            display: flex;
+            .menu_item+.menu_item {
+                margin-left: 57px;
+            }
+            .menu_item {
+                padding-top: 48px;
+                font-size: 18px;
+                line-height: 25px;
+            }
+            .active {
+                font-weight: bold;
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 50%;
+                    padding-top: 8px;
+                    border-bottom: 3px solid #C61D20;
+                }
+            }
+        }
+    }
+    .preview_outer {
+        flex: auto;
+        display: flex;
+        align-items: center;
+    }
+    .preview {
+        color: #fff;
+        &__title {
+            max-width: 763px;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 66px;
+        }
+        &__description {
+            margin-top: 16px;
+            max-width: 385px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        .main_btn {
+            margin-top: 38px;
+        }
+    }
+}
+
+// ========================================================== / section_intro ===============
+// ---------------------------------------------------------- section_advantages ------------
+.section_advantages {
+    .advantages_area {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+    .advantages_item {
+        background: #FFFFFF;
+        box-shadow: 0px 6.76923px 33.8462px rgba(0, 0, 0, 0.15);
+        border-radius: 8.46154px;
+        max-width: 280px;
+        padding: 80px 40px;
+        &__icon {
+            border: 3px solid #B31217;
+            border-radius: 3.125px;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 40px;
+            margin-top: 20px;
+        }
+        &__description {
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: 14px;
+        }
+    }
+}
+
+// ========================================================== / section_advantages ==========
+// ---------------------------------------------------------- section_about -----------------
+.section_about {
+    background: rgba(242, 242, 242, 0.4);
+    .section_about_inner {
+        display: flex;
+        .about_promo_images {
+            flex: 1;
+            position: relative;
+            padding: 33px 33px 63px 0;
+            img {
+                position: relative;
+                z-index: 10;
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                height: 100px;
+                width: 100px;
+                background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+                border-radius: 10px;
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+                z-index: 5;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: -63px;
+                display: block;
+                width: 275px;
+                height: 172px;
+                z-index: 5;
+                background: url(../assets/about/about_2.jpg) no-repeat 0 0;
+                background-size: cover;
+                border-radius: 10px;
+                z-index: 15;
+            }
+        }
+        .about_promo_text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            max-width: 500px;
+            padding: 33px 0 63px;
+            margin-left: 92px;
+            &__description {
+                margin-bottom: 38px;
+                margin-top: 22px;
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+// ========================================================== / section_about ===============
+// ---------------------------------------------------------- section_reviews ---------------
+.section_reviews {}
+
+// ========================================================== / section_reviews =============
+// ---------------------------------------------------------- section_requirements ----------
+.section_requirements {}
+
+// ========================================================== / section_requirements ========
+// ---------------------------------------------------------- section_vacancies -------------
+.section_vacancies {}
+
+// ========================================================== / section_vacancies ===========
+// ---------------------------------------------------------- section_promo -----------------
+.section_promo {}
+
+// ========================================================== / section_intro ===============
+// ---------------------------------------------------------- section_anketa ----------------
+.section_anketa {}
+
+// ========================================================== / section_anketa ==============
+// ---------------------------------------------------------- section_FAQ -------------------
+.section_FAQ {}
+
+// ========================================================== / section_FAQ =================
+// ---------------------------------------------------------- section_contacts --------------
+.section_contacts {}
+
+// ========================================================== / section_contacts ============
