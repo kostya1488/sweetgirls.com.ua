@@ -30,7 +30,7 @@ a {
     line-height: 52px;
     color: $main_brand_color;
     font-weight: 700;
-    margin-bottom: 41px;
+    margin-bottom: 54px;
 }
 
 .wrapper {
@@ -47,8 +47,10 @@ a {
     line-height: 24px;
     border-radius: 5px;
     &__main {
+        border: none;
         padding: 16px 0;
         width: 261px;
+        color: #fff;
         @include brand_bg_color();
     }
     &__secondary {
@@ -464,11 +466,84 @@ a {
 
 // ========================================================== / section_intro ===============
 // ---------------------------------------------------------- section_anketa ----------------
-.section_anketa {}
+.section_anketa {
+    .anketa_area {
+        display: flex;
+        background: #FBFBFB;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.51);
+        border-radius: 10px;
+        overflow: hidden;
+        .anketa_photo {
+            max-width: 506px;
+            width: 100%;
+            background: url(../assets/photo-1555991415-a6a1dc2f950b1.jpg) no-repeat 50% 50%;
+        }
+        .anketa_form {
+            padding: 53px 40px 62px 76px;
+            &_title {
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 40px;
+                color: $main_brand_color;
+                margin-bottom: 40px;
+            }
+            .forma {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-sizing: border-box;
+                input {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    padding: 16px 21px;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(181, 181, 181, 0.47);
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    outline: none;
+                    &:focus {
+                        border: 2px solid rgba(181, 181, 181, 0.47);
+                    }
+                }
+                button {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
 
 // ========================================================== / section_anketa ==============
 // ---------------------------------------------------------- section_FAQ -------------------
-.section_FAQ {}
+.section_FAQ {
+    background: #13366C;
+    .section_FAQ_wrap {
+        display: flex;
+    }
+    .section_title {
+        color: #fff;
+        max-width: 150px;
+    }
+    .faq_area {
+        margin-left: 300px;
+        flex: auto;
+        .faq_area_item {
+            display: flex;
+            justify-content: space-between;
+            background: #FFFFFF;
+            border-radius: 10px;
+            padding: 12px 27px;
+            max-width: 642px;
+            width: 100%;
+            font-size: 18px;
+            line-height: 25px;
+            color: #13366C;
+            &+.faq_area_item {
+                margin-top: 20px;
+            }
+        }
+    }
+}
 
 // ========================================================== / section_FAQ =================
 // ---------------------------------------------------------- section_contacts --------------

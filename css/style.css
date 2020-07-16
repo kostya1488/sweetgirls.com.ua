@@ -14,7 +14,7 @@ a {
   line-height: 52px;
   color: #B31217;
   font-weight: 700;
-  margin-bottom: 41px; }
+  margin-bottom: 54px; }
 
 .wrapper {
   width: 100%;
@@ -29,8 +29,10 @@ a {
   line-height: 24px;
   border-radius: 5px; }
   .btn__main {
+    border: none;
     padding: 16px 0;
     width: 261px;
+    color: #fff;
     background: linear-gradient(90deg, #E52D27 0%, #B31217 100%); }
   .btn__secondary {
     padding: 14px 0;
@@ -354,3 +356,64 @@ a {
           width: 100%;
           height: 100%;
           object-fit: cover; }
+
+.section_anketa .anketa_area {
+  display: flex;
+  background: #FBFBFB;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.51);
+  border-radius: 10px;
+  overflow: hidden; }
+  .section_anketa .anketa_area .anketa_photo {
+    max-width: 506px;
+    width: 100%;
+    background: url(../assets/photo-1555991415-a6a1dc2f950b1.jpg) no-repeat 50% 50%; }
+  .section_anketa .anketa_area .anketa_form {
+    padding: 53px 40px 62px 76px; }
+    .section_anketa .anketa_area .anketa_form_title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 40px;
+      color: #B31217;
+      margin-bottom: 40px; }
+    .section_anketa .anketa_area .anketa_form .forma {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box; }
+      .section_anketa .anketa_area .anketa_form .forma input {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 16px 21px;
+        background: #FFFFFF;
+        border: 1px solid rgba(181, 181, 181, 0.47);
+        box-sizing: border-box;
+        border-radius: 5px;
+        outline: none; }
+        .section_anketa .anketa_area .anketa_form .forma input:focus {
+          border: 2px solid rgba(181, 181, 181, 0.47); }
+      .section_anketa .anketa_area .anketa_form .forma button {
+        margin-top: 40px; }
+
+.section_FAQ {
+  background: #13366C; }
+  .section_FAQ .section_FAQ_wrap {
+    display: flex; }
+  .section_FAQ .section_title {
+    color: #fff;
+    max-width: 150px; }
+  .section_FAQ .faq_area {
+    margin-left: 300px;
+    flex: auto; }
+    .section_FAQ .faq_area .faq_area_item {
+      display: flex;
+      justify-content: space-between;
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 12px 27px;
+      max-width: 642px;
+      width: 100%;
+      font-size: 18px;
+      line-height: 25px;
+      color: #13366C; }
+      .section_FAQ .faq_area .faq_area_item + .faq_area_item {
+        margin-top: 20px; }
