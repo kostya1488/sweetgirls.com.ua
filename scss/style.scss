@@ -1,8 +1,13 @@
 // ---------------------------------------------------------- mixins ------------------------
+@mixin brand_bg_color {
+    background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+}
+
 // ========================================================== / mixins ======================
 // ---------------------------------------------------------- variables ---------------------
 $main_font: 'Open Sans',
 sans-serif;
+$main_brand_color: #B31217;
 // ========================================================== / variables ===================
 // ---------------------------------------------------------- commons -----------------------
 // ========================================================== / commons =====================
@@ -22,8 +27,8 @@ a {
 
 .section_title {
     font-size: 50px;
-    line-height: 66px;
-    color: #B31217;
+    line-height: 52px;
+    color: $main_brand_color;
     font-weight: 700;
     margin-bottom: 41px;
 }
@@ -34,14 +39,24 @@ a {
     margin: 0 auto;
 }
 
-.main_btn {
+.btn {
     display: inline-block;
-    padding: 16px 48px;
+    text-align: center;
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
-    background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
     border-radius: 5px;
+    &__main {
+        padding: 16px 0;
+        width: 261px;
+        @include brand_bg_color();
+    }
+    &__secondary {
+        padding: 14px 0;
+        width: 257px;
+        border: 2px solid $main_brand_color;
+        color: $main_brand_color;
+    }
 }
 
 // ---------------------------------------------------------- section_intro -----------------
@@ -122,7 +137,7 @@ a {
         max-width: 280px;
         padding: 80px 40px;
         &__icon {
-            border: 3px solid #B31217;
+            border: 3px solid $main_brand_color;
             border-radius: 3.125px;
             width: 56px;
             height: 56px;
@@ -170,7 +185,7 @@ a {
                 display: block;
                 height: 100px;
                 width: 100px;
-                background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+                @include brand_bg_color();
                 border-radius: 10px;
                 transform: matrix(-1, 0, 0, 1, 0, 0);
                 z-index: 5;
@@ -209,19 +224,243 @@ a {
 
 // ========================================================== / section_about ===============
 // ---------------------------------------------------------- section_reviews ---------------
-.section_reviews {}
+.section_reviews {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 85%, 100% 30%, 100% 100%, 0% 100%);
+        @include brand_bg_color();
+        z-index: 5;
+    }
+    .reviews_outer {
+        position: relative;
+        background: #FAFAFA;
+        border-radius: 10px;
+        padding: 80px 100px;
+        z-index: 15;
+    }
+    .reviews_title {
+        margin-bottom: 24px;
+    }
+    .reviews_subtitle {
+        font-size: 30px;
+        line-height: 40px;
+        color: rgba(58, 58, 58, 0.83);
+        margin-bottom: 26px;
+    }
+    .reviews_subtitle_area {
+        display: flex;
+        justify-content: space-between;
+        .reviews_item {
+            position: relative;
+            max-width: 226px;
+            padding: 48px 27px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            margin-top: 33px;
+            &+.reviews_item {
+                margin-left: 10px;
+            }
+            &__photo {
+                position: absolute;
+                top: -33px;
+                left: 50%;
+                margin-left: -41px;
+                height: 82px;
+                width: 82px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &__title {
+                text-align: center;
+                font-weight: 600;
+                font-size: 21px;
+                line-height: 30px;
+                text-transform: uppercase;
+                color: $main_brand_color;
+                margin: 20px 0;
+            }
+            &__description {
+                font-size: 18px;
+                line-height: 25px;
+                color: rgba(0, 0, 0, 0.9);
+            }
+        }
+    }
+}
 
 // ========================================================== / section_reviews =============
 // ---------------------------------------------------------- section_requirements ----------
-.section_requirements {}
+.section_requirements {
+    background: rgba(169, 211, 238, 0.29);
+    .requirements_wrap {
+        display: flex;
+    }
+    .requirements_photo {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        .photo_area {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 489px;
+            height: 447px;
+            border-radius: 10px;
+            @include brand_bg_color();
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+    .requirements_text {
+        flex: 1;
+        &__title {
+            color: #13366C;
+            margin-bottom: 24px;
+        }
+        &__subtitle {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            color: $main_brand_color;
+            margin-bottom: 36px;
+        }
+        &__list {
+            padding: 0;
+            list-style: none;
+            margin-top: 0;
+            margin-bottom: 36px;
+            li {
+                background: url(../assets/bi_check-circle-fill.svg) no-repeat 0 2.5px;
+                padding-left: 32px;
+                font-size: 18px;
+                line-height: 25px;
+                margin-bottom: 15px;
+            }
+        }
+        &__buttons {
+            .btn+.btn {
+                margin-left: 20px;
+            }
+        }
+    }
+}
 
 // ========================================================== / section_requirements ========
 // ---------------------------------------------------------- section_vacancies -------------
-.section_vacancies {}
+.section_vacancies {
+    .section_title,
+    .vacancies_button {
+        text-align: center;
+    }
+    .vacancies_area {
+        display: flex;
+        justify-content: space-between;
+        .vacancies_item {
+            max-width: 280px;
+            &__banner {
+                overflow: hidden;
+                max-height: 384px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.19);
+                margin-bottom: 10px;
+            }
+            &__title {
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 40px;
+                color: $main_brand_color;
+                margin-bottom: 15px;
+            }
+            &__description {
+                font-size: 18px;
+                line-height: 25px;
+                color: #000000;
+            }
+        }
+        margin-bottom: 58px;
+    }
+}
 
 // ========================================================== / section_vacancies ===========
 // ---------------------------------------------------------- section_promo -----------------
-.section_promo {}
+.section_promo {
+    padding-bottom: 0;
+    background: #E6F2FA;
+    .promo_title {
+        display: flex;
+        justify-content: center;
+        .section_title {
+            color: #13366C;
+            max-width: 693px;
+        }
+    }
+    .promo_item {
+        position: relative;
+        padding: 100px;
+        .item_description {
+            position: absolute;
+            top: 40%;
+            left: 17%;
+            width: 488px;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 40px;
+            color: #13366C;
+            z-index: 15;
+        }
+        .item_description_rev {
+            left: 61%;
+        }
+    }
+    .promo_item_reverse {
+        padding: 100px;
+        .item_wrap {
+            flex-direction: row-reverse;
+        }
+    }
+    .item_wrap {
+        display: flex;
+        .promo_text {
+            flex: 1;
+            &__number {
+                font-weight: 800;
+                font-size: 192px;
+                line-height: 130px;
+                color: #B5CFE4;
+            }
+        }
+        .promo_photo {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            .photo_wrap {
+                overflow: hidden;
+                border: 6px solid #D4E9F7;
+                border-radius: 12px;
+                width: 280px;
+                height: 280px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
 
 // ========================================================== / section_intro ===============
 // ---------------------------------------------------------- section_anketa ----------------

@@ -11,7 +11,7 @@ a {
 
 .section_title {
   font-size: 50px;
-  line-height: 66px;
+  line-height: 52px;
   color: #B31217;
   font-weight: 700;
   margin-bottom: 41px; }
@@ -21,14 +21,22 @@ a {
   max-width: 1216px;
   margin: 0 auto; }
 
-.main_btn {
+.btn {
   display: inline-block;
-  padding: 16px 48px;
+  text-align: center;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
   border-radius: 5px; }
+  .btn__main {
+    padding: 16px 0;
+    width: 261px;
+    background: linear-gradient(90deg, #E52D27 0%, #B31217 100%); }
+  .btn__secondary {
+    padding: 14px 0;
+    width: 257px;
+    border: 2px solid #B31217;
+    color: #B31217; }
 
 .section_intro {
   padding-top: 0;
@@ -160,3 +168,189 @@ a {
         margin-bottom: 58px;
         font-size: 18px;
         line-height: 25px; }
+
+.section_reviews {
+  position: relative; }
+  .section_reviews::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 85%, 100% 30%, 100% 100%, 0% 100%);
+    background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+    z-index: 5; }
+  .section_reviews .reviews_outer {
+    position: relative;
+    background: #FAFAFA;
+    border-radius: 10px;
+    padding: 80px 100px;
+    z-index: 15; }
+  .section_reviews .reviews_title {
+    margin-bottom: 24px; }
+  .section_reviews .reviews_subtitle {
+    font-size: 30px;
+    line-height: 40px;
+    color: rgba(58, 58, 58, 0.83);
+    margin-bottom: 26px; }
+  .section_reviews .reviews_subtitle_area {
+    display: flex;
+    justify-content: space-between; }
+    .section_reviews .reviews_subtitle_area .reviews_item {
+      position: relative;
+      max-width: 226px;
+      padding: 48px 27px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      margin-top: 33px; }
+      .section_reviews .reviews_subtitle_area .reviews_item + .reviews_item {
+        margin-left: 10px; }
+      .section_reviews .reviews_subtitle_area .reviews_item__photo {
+        position: absolute;
+        top: -33px;
+        left: 50%;
+        margin-left: -41px;
+        height: 82px;
+        width: 82px;
+        border-radius: 50%;
+        overflow: hidden; }
+        .section_reviews .reviews_subtitle_area .reviews_item__photo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .section_reviews .reviews_subtitle_area .reviews_item__title {
+        text-align: center;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #B31217;
+        margin: 20px 0; }
+      .section_reviews .reviews_subtitle_area .reviews_item__description {
+        font-size: 18px;
+        line-height: 25px;
+        color: rgba(0, 0, 0, 0.9); }
+
+.section_requirements {
+  background: rgba(169, 211, 238, 0.29); }
+  .section_requirements .requirements_wrap {
+    display: flex; }
+  .section_requirements .requirements_photo {
+    flex: 1;
+    display: flex;
+    align-items: center; }
+    .section_requirements .requirements_photo .photo_area {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 489px;
+      height: 447px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #E52D27 0%, #B31217 100%); }
+      .section_requirements .requirements_photo .photo_area img {
+        object-fit: contain; }
+  .section_requirements .requirements_text {
+    flex: 1; }
+    .section_requirements .requirements_text__title {
+      color: #13366C;
+      margin-bottom: 24px; }
+    .section_requirements .requirements_text__subtitle {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      color: #B31217;
+      margin-bottom: 36px; }
+    .section_requirements .requirements_text__list {
+      padding: 0;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 36px; }
+      .section_requirements .requirements_text__list li {
+        background: url(../assets/bi_check-circle-fill.svg) no-repeat 0 2.5px;
+        padding-left: 32px;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 15px; }
+    .section_requirements .requirements_text__buttons .btn + .btn {
+      margin-left: 20px; }
+
+.section_vacancies .section_title,
+.section_vacancies .vacancies_button {
+  text-align: center; }
+
+.section_vacancies .vacancies_area {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 58px; }
+  .section_vacancies .vacancies_area .vacancies_item {
+    max-width: 280px; }
+    .section_vacancies .vacancies_area .vacancies_item__banner {
+      overflow: hidden;
+      max-height: 384px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.19);
+      margin-bottom: 10px; }
+    .section_vacancies .vacancies_area .vacancies_item__title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 40px;
+      color: #B31217;
+      margin-bottom: 15px; }
+    .section_vacancies .vacancies_area .vacancies_item__description {
+      font-size: 18px;
+      line-height: 25px;
+      color: #000000; }
+
+.section_promo {
+  padding-bottom: 0;
+  background: #E6F2FA; }
+  .section_promo .promo_title {
+    display: flex;
+    justify-content: center; }
+    .section_promo .promo_title .section_title {
+      color: #13366C;
+      max-width: 693px; }
+  .section_promo .promo_item {
+    position: relative;
+    padding: 100px; }
+    .section_promo .promo_item .item_description {
+      position: absolute;
+      top: 40%;
+      left: 17%;
+      width: 488px;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 40px;
+      color: #13366C;
+      z-index: 15; }
+    .section_promo .promo_item .item_description_rev {
+      left: 61%; }
+  .section_promo .promo_item_reverse {
+    padding: 100px; }
+    .section_promo .promo_item_reverse .item_wrap {
+      flex-direction: row-reverse; }
+  .section_promo .item_wrap {
+    display: flex; }
+    .section_promo .item_wrap .promo_text {
+      flex: 1; }
+      .section_promo .item_wrap .promo_text__number {
+        font-weight: 800;
+        font-size: 192px;
+        line-height: 130px;
+        color: #B5CFE4; }
+    .section_promo .item_wrap .promo_photo {
+      flex: 1;
+      display: flex;
+      justify-content: center; }
+      .section_promo .item_wrap .promo_photo .photo_wrap {
+        overflow: hidden;
+        border: 6px solid #D4E9F7;
+        border-radius: 12px;
+        width: 280px;
+        height: 280px; }
+        .section_promo .item_wrap .promo_photo .photo_wrap img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
