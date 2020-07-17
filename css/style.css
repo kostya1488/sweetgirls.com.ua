@@ -60,7 +60,7 @@ a {
       .section_intro .header .menu .menu_item + .menu_item {
         margin-left: 57px; }
       .section_intro .header .menu .menu_item {
-        padding-top: 48px;
+        padding: 48px 0;
         font-size: 18px;
         line-height: 25px; }
       .section_intro .header .menu .active {
@@ -86,9 +86,8 @@ a {
       margin-top: 16px;
       max-width: 385px;
       font-size: 18px;
-      line-height: 25px; }
-    .section_intro .preview .main_btn {
-      margin-top: 38px; }
+      line-height: 25px;
+      margin-bottom: 38px; }
 
 .section_advantages .advantages_area {
   display: flex;
@@ -390,7 +389,7 @@ a {
         border-radius: 5px;
         outline: none; }
         .section_anketa .anketa_area .anketa_form .forma input:focus {
-          border: 2px solid rgba(181, 181, 181, 0.47); }
+          box-shadow: inset 0px 0px 0px 1px rgba(181, 181, 181, 0.47); }
       .section_anketa .anketa_area .anketa_form .forma button {
         margin-top: 40px; }
 
@@ -417,3 +416,52 @@ a {
       color: #13366C; }
       .section_FAQ .faq_area .faq_area_item + .faq_area_item {
         margin-top: 20px; }
+
+.section_contacts {
+  padding: 0;
+  display: flex; }
+  .section_contacts .logo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .section_contacts .contacts_wrap {
+    padding: 100px 0;
+    width: 100%;
+    background: linear-gradient(90deg, #E52D27 0%, #B31217 100%); }
+    .section_contacts .contacts_wrap .contacts_area {
+      flex: auto;
+      display: flex;
+      justify-content: center; }
+      .section_contacts .contacts_wrap .contacts_area ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 150px;
+        width: 800px;
+        margin: 0;
+        padding: 0; }
+        .section_contacts .contacts_wrap .contacts_area ul li {
+          width: 200px;
+          font-weight: bold;
+          font-size: 18px;
+          color: #FFFFFF; }
+          .section_contacts .contacts_wrap .contacts_area ul li .contact_description {
+            margin-top: 10px;
+            line-height: 25px;
+            font-weight: 300; }
+        .section_contacts .contacts_wrap .contacts_area ul .social {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          width: 200px;
+          height: 25px;
+          margin-top: 10px; }
+          .section_contacts .contacts_wrap .contacts_area ul .social li + li {
+            margin-left: 13px; }
+          .section_contacts .contacts_wrap .contacts_area ul .social li {
+            width: 25px; }
+          .section_contacts .contacts_wrap .contacts_area ul .social img {
+            width: 25px; }
