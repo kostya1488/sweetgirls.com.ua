@@ -44,7 +44,8 @@ a {
   padding-top: 0;
   background: url(../assets/img/banner.jpg) no-repeat 0% 100%;
   background-size: cover;
-  height: 700px;
+  min-height: 100vh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column; }
   .section_intro ul {
@@ -76,12 +77,13 @@ a {
     display: flex;
     align-items: center; }
   .section_intro .preview {
-    color: #fff; }
+    color: #fff;
+    padding-left: 300px; }
     .section_intro .preview__title {
-      max-width: 763px;
+      max-width: 538px;
       font-weight: bold;
-      font-size: 50px;
-      line-height: 66px; }
+      font-size: 40px;
+      line-height: 47px; }
     .section_intro .preview__description {
       margin-top: 16px;
       max-width: 385px;
