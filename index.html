@@ -14,32 +14,39 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
     <!-- ------------------------------------------------- intro ------------------------------------------------- -->
     <section id="intro" class="section_intro">
-        <header class="header wrapper inner_wrapper">
-            <div class="logo">
-                <a href=""><img src="assets/Group 38.svg" alt=""></a>
-            </div>
-            <nav>
-                <div class="hamburger_menu">
-                    <input id="menu_toggle" type="checkbox" />
-                    <label class="menu_btn" for="menu_toggle">
+        <div class="intro_banner">
+            <header class="header wrapper inner_wrapper">
+                <div class="logo">
+                    <a href=""><img src="assets/Group 38.svg" alt=""></a>
+                </div>
+                <nav>
+                    <div class="hamburger_menu">
+                        <input id="menu_toggle" type="checkbox" />
+                        <label class="menu_btn" for="menu_toggle">
                       <span></span>
                     </label>
-                    <ul class="menu_box">
-                        <li><a class="menu_item active" href="#">Главная</a></li>
-                        <li><a class="menu_item" href="#">Контакты</a></li>
-                        <li><a class="menu_item" href="#">Вакансии</a></li>
-                        <li><a class="menu_item" href="#">Анкета</a></li>
-                        <li><a class="menu_item" href="#">Про агенство</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <div class="preview_outer">
+                        <ul class="menu_box">
+                            <li><a class="menu_item active" href="#">Главная</a></li>
+                            <li><a class="menu_item" href="#">Контакты</a></li>
+                            <li><a class="menu_item" href="#">Вакансии</a></li>
+                            <li><a class="menu_item" href="#">Анкета</a></li>
+                            <li><a class="menu_item" href="#">Про агенство</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="preview_outer inner_wrapper">
             <div class="preview wrapper">
                 <div class="preview__title">Зарабатывайте на эскорт услугах от 8000$</div>
                 <div class="preview__description">Мы приглашаем к сотрудничеству девушек со всей Украины. У нас всегда актуальные вакансии в сфере эскорта</div>
@@ -94,10 +101,16 @@
     <!-- ================================================= / about =============================================== -->
     <!-- ------------------------------------------------- reviews ----------------------------------------------- -->
     <section id="reviews" class="section_reviews">
-        <div class="wrapper inner_wrapper">
-            <div class="reviews_outer">
+        <div class="wrapper">
+            <div class="mob_v_title_block">
                 <div class="section_title reviews_title">Отзывы девушек</div>
                 <div class="reviews_subtitle">Они уже с нами и вот что они думают</div>
+            </div>
+            <div class="reviews_outer">
+                <div class="desctop_v_title_block">
+                    <div class="section_title reviews_title">Отзывы девушек</div>
+                    <div class="reviews_subtitle">Они уже с нами и вот что они думают</div>
+                </div>
                 <div class="reviews_subtitle_area">
                     <div class="reviews_item">
                         <div class="reviews_item__photo">
@@ -138,10 +151,10 @@
                     <div class="section_title requirements_text__title">Ты можешь быть частью нашего агентсва!</div>
                     <div class="requirements_text__subtitle">Некоторые критерии которыми ты должна обладать</div>
                     <ul class="requirements_text__list">
-                        <li>Подтянутая фигура.</li>
-                        <li>Коммуникабельность – умение вести диалог на любые темы.</li>
-                        <li>Образованность.</li>
-                        <li>Знание основ психологии, что очень важно в общении со статусными мужчинами!</li>
+                        <li><img src="assets/bi_check-circle-fill.svg" alt="">Подтянутая фигура.</li>
+                        <li><img src="assets/bi_check-circle-fill.svg" alt="">Коммуникабельность – умение вести диалог на любые темы.</li>
+                        <li><img src="assets/bi_check-circle-fill.svg" alt="">Образованность.</li>
+                        <li><img src="assets/bi_check-circle-fill.svg" alt="">Знание основ психологии, что очень важно в общении со статусными мужчинами!</li>
                     </ul>
                     <div class="requirements_text__buttons">
                         <a href="#" class="btn btn__main">Заполнить анкету</a>
@@ -163,7 +176,6 @@
                 </div>
                 <div class="vacancies_item__title">Визит</div>
                 <div class="vacancies_item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus, pellentesque scelerisque elementum cras lectus proin.</div>
-
             </div>
             <div class="vacancies_item">
                 <div class="vacancies_item__banner">
@@ -171,7 +183,6 @@
                 </div>
                 <div class="vacancies_item__title">Мероприятия</div>
                 <div class="vacancies_item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus, pellentesque scelerisque elementum cras lectus proin.</div>
-
             </div>
             <div class="vacancies_item">
                 <div class="vacancies_item__banner">
@@ -179,7 +190,6 @@
                 </div>
                 <div class="vacancies_item__title">Путешествия</div>
                 <div class="vacancies_item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus, pellentesque scelerisque elementum cras lectus proin.</div>
-
             </div>
             <div class="vacancies_item">
                 <div class="vacancies_item__banner">
@@ -187,12 +197,60 @@
                 </div>
                 <div class="vacancies_item__title">Досуг</div>
                 <div class="vacancies_item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus, pellentesque scelerisque elementum cras lectus proin.</div>
-
             </div>
+        </div>
+        <!-- ----------------------------------------------------- -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="vacancies_item">
+                        <div class="vacancies_item__banner">
+                            <img src="assets/vacancies/1.jpg" alt="">
+                        </div>
+                        <div class="vacancies_item__title">Визит</div>
+                        <div class="vacancies_item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus, pellentesque scelerisque elementum cras lectus proin.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="vacancies_item">
+                        <div class="vacancies_item__banner">
+                            <img src="assets/vacancies/2.jpg" alt="">
+                        </div>
+                        <div class="vacancies_item__title">Мероприятия</div>
+                        <div class="vacancies_item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus, pellentesque scelerisque elementum cras lectus proin.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="vacancies_item">
+                        <div class="vacancies_item__banner">
+                            <img src="assets/vacancies/3.jpg" alt="">
+                        </div>
+                        <div class="vacancies_item__title">Путешествия</div>
+                        <div class="vacancies_item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus, pellentesque scelerisque elementum cras lectus proin.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="vacancies_item">
+                        <div class="vacancies_item__banner">
+                            <img src="assets/vacancies/4.jpg" alt="">
+                        </div>
+                        <div class="vacancies_item__title">Досуг</div>
+                        <div class="vacancies_item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus, pellentesque scelerisque elementum cras lectus proin.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="vacancies_button_mob">
+                <a href="#" class="btn btn__main">Заполнить анкету</a>
+            </div>
+
+            <div class="swiper-pagination"></div>
         </div>
         <div class="vacancies_button">
             <a href="#" class="btn btn__main">Заполнить анкету</a>
         </div>
+
+
+
     </section>
     <!-- ================================================= / vacancies =========================================== -->
     <!-- ------------------------------------------------- promo ------------------------------------------------- -->
@@ -221,7 +279,7 @@
                         <div class="promo_text__number">02</div>
                     </div>
                     <div class="promo_photo">
-                        <div class="photo_wrap">
+                        <div class="photo_wrap photo_wrap_reverse">
                             <img src="assets/promo/2.jpg" alt="">
                         </div>
                     </div>
@@ -251,7 +309,7 @@
         <div class="anketa_area">
             <div class="anketa_photo"></div>
             <div class="anketa_form">
-                <div class="anketa_form_title">Заполняй анкету и зарабатывай прямо сейчас</div>
+                <div class="anketa_form__title">Заполняй анкету и зарабатывай прямо сейчас</div>
                 <form id="forma" class="forma">
                     <input type="text" name="name" placeholder="Имя">
                     <input type="text" name="city" placeholder="Город">
@@ -295,33 +353,37 @@
         </div>
     </section>
     <!-- ================================================= / FAQ ================================================= -->
-    <!-- ------------------------------------------------- FAQ --------------------------------------------------- -->
+    <!-- ------------------------------------------------- contacts --------------------------------------------------- -->
     <section id="contacts" class="section_contacts inner_wrapper">
         <div class="logo">
             <img src="assets/Group 37.svg" alt="">
         </div>
 
-        <!-- <div class="wrapper"> -->
-        <div class="contacts_wrap">
+
+
+        <div class="contacts_wrap inner_wrapper">
+            <div class="logo_mob">
+                <img src="assets/Group 39.svg" alt="">
+            </div>
             <div class="contacts_area">
                 <ul>
-                    <li class="">
+                    <li class="ul_main">
                         <a href="#">Главная</a>
                     </li>
-                    <li class="">
+                    <li class="ul_about">
                         <a href="#">Про агенство</a>
                     </li>
-                    <li class="">
+                    <li class="ul_anketa">
                         <a href="#">Анкета</a>
                     </li>
-                    <li class="">
+                    <li class="ul_contacts">
                         <a href="#">Контакты</a>
-                        <div class="contact_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat adipiscing egestas varius hendrerit.</div>
+                        <div class="contact_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat adipiscing .</div>
                     </li>
-                    <li class="">
+                    <li class="ul_vacancy">
                         <a href="#">Вакансии</a>
                     </li>
-                    <li class="">
+                    <li class="ul_write_to_us">
                         <a href="#">Напиши нам</a>
                         <ul class="social">
                             <li>
@@ -338,9 +400,9 @@
                 </ul>
             </div>
         </div>
-        <!-- </div> -->
     </section>
-    <!-- ================================================= / FAQ ================================================= -->
+    <!-- ================================================= / contacts ================================================= -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
