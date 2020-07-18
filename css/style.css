@@ -68,6 +68,9 @@ a {
   padding-bottom: 0;
   display: flex;
   flex-direction: column; }
+  @media (max-width: 575px) {
+    .section_intro {
+      height: 100vh; } }
   .section_intro ul {
     list-style: none;
     margin: 0;
@@ -85,29 +88,33 @@ a {
         .section_intro .header nav .menu_box .menu_item {
           font-size: 18px;
           line-height: 25px; }
-        .section_intro .header nav .menu_box .active {
-          font-weight: bold; }
-          .section_intro .header nav .menu_box .active:after {
-            content: "";
-            display: block;
-            width: 50%;
-            padding-top: 8px;
-            border-bottom: 3px solid #C61D20; }
-        .section_intro .header nav .menu_box li + li {
-          margin-left: 57px; }
+        @media (min-width: 576px) {
+          .section_intro .header nav .menu_box li + li {
+            margin-left: 57px; }
+          .section_intro .header nav .menu_box .active {
+            font-weight: bold; }
+            .section_intro .header nav .menu_box .active:after {
+              content: "";
+              display: block;
+              width: 50%;
+              padding-top: 8px;
+              border-bottom: 3px solid #C61D20; } }
       .section_intro .header nav #menu_toggle {
         display: none; }
       @media (max-width: 768px) {
         .section_intro .header nav #menu_toggle {
           opacity: 0; }
           .section_intro .header nav #menu_toggle:checked ~ .menu_btn > span {
-            transform: rotate(45deg); }
+            transform: rotate(45deg);
+            background-color: #B31217; }
           .section_intro .header nav #menu_toggle:checked ~ .menu_btn > span::before {
             top: 0;
-            transform: rotate(0); }
+            transform: rotate(0);
+            background-color: #B31217; }
           .section_intro .header nav #menu_toggle:checked ~ .menu_btn > span::after {
             top: 0;
-            transform: rotate(90deg); }
+            transform: rotate(90deg);
+            background-color: #B31217; }
           .section_intro .header nav #menu_toggle:checked ~ .menu_box {
             visibility: visible;
             left: 0; }
@@ -147,30 +154,35 @@ a {
           position: fixed;
           visibility: hidden;
           top: 0;
-          left: -100%;
-          width: 300px;
-          height: 100%;
-          margin: 0;
-          padding: 80px 0;
-          list-style: none;
-          background-color: #ECEFF1;
-          box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-          transition-duration: .25s; }
+          left: 100%;
+          width: 100%;
+          margin-left: 30%;
+          background: #FFFFFF;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 0 0 0 10px;
+          transition-duration: .4s;
+          padding: 52px 55px 36px; }
         .section_intro .header nav .menu_item {
-          display: block;
-          padding: 12px 24px;
-          color: #333;
-          font-family: 'Roboto', sans-serif;
-          font-size: 20px;
+          display: inline-block;
           font-weight: 600;
-          text-decoration: none;
-          transition-duration: .25s; }
-        .section_intro .header nav .menu_item:hover {
-          background-color: #CFD8DC; } }
+          font-size: 16px;
+          line-height: 21px;
+          color: #000000;
+          transition-duration: .25s;
+          margin-bottom: 16px; }
+        .section_intro .header nav .active {
+          font-weight: bold;
+          margin-bottom: 12px; }
+          .section_intro .header nav .active:after {
+            content: "";
+            display: block;
+            width: 50%;
+            padding-top: 4px;
+            border-bottom: 3px solid #C61D20; } }
   .section_intro .intro_banner {
     background: url(../assets/img/banner.jpg) no-repeat 86% 0%;
     background-size: cover;
-    height: 60vh; }
+    height: 100%; }
     @media (max-width: 575px) {
       .section_intro .intro_banner {
         background-position: 84% 100%; } }
@@ -183,10 +195,10 @@ a {
       color: #000;
       flex-direction: column;
       justify-content: space-between; }
-      @media (max-width: 991px) {
+      @media (max-width: 575px) {
         .section_intro .preview_outer .preview {
           align-items: center;
-          height: 40vh; } }
+          height: 278px; } }
       .section_intro .preview_outer .preview__title {
         margin-top: 3vh;
         font-weight: bold;
@@ -791,15 +803,16 @@ a {
 .section_FAQ {
   background: #13366C; }
   .section_FAQ .section_title {
-    color: #fff;
-    max-width: 150px; }
-    @media (max-width: 1200px) {
+    color: #fff; }
+    @media (min-width: 576px) {
       .section_FAQ .section_title {
         margin-left: 100px; } }
     @media (max-width: 575px) {
       .section_FAQ .section_title {
         margin-bottom: 26px; } }
-  .section_FAQ .faq_area_item {
+  .section_FAQ .faq_area_item + .faq_area_item {
+    margin-top: 20px; }
+  .section_FAQ .faq_area_item .toggle {
     display: flex;
     justify-content: space-between;
     background: #FFFFFF;
@@ -810,12 +823,10 @@ a {
     font-size: 18px;
     line-height: 25px;
     color: #13366C; }
-    .section_FAQ .faq_area_item + .faq_area_item {
-      margin-top: 20px; }
-    .section_FAQ .faq_area_item img {
+    .section_FAQ .faq_area_item .toggle img {
       margin-left: 8px; }
     @media (max-width: 575px) {
-      .section_FAQ .faq_area_item {
+      .section_FAQ .faq_area_item .toggle {
         padding: 12px 20px;
         font-size: 16px;
         line-height: 21px; } }
@@ -825,6 +836,12 @@ a {
       .section_FAQ .section_FAQ_wrap .faq_area {
         margin-left: 300px;
         flex: auto; } }
+  .section_FAQ .accordion {
+    list-style: none;
+    padding: 0; }
+    .section_FAQ .accordion .inner {
+      overflow: hidden;
+      display: none; }
 
 .section_contacts {
   padding: 0;
@@ -909,7 +926,7 @@ a {
                 .section_contacts .contacts_wrap .contacts_area ul .ul_write_to_us .social img {
                   width: 33px; } }
         .section_contacts .contacts_wrap .contacts_area ul li {
-          width: 200px;
+          max-width: 200px;
           font-weight: bold;
           font-size: 18px;
           color: #FFFFFF; }

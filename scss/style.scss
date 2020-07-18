@@ -104,6 +104,9 @@
         padding-bottom: 0;
         display: flex;
         flex-direction: column;
+        @media (max-width: $screen_xs_max) {
+            height: 100vh;
+        }
         ul {
             list-style: none;
             margin: 0;
@@ -123,18 +126,20 @@
                         font-size: 18px;
                         line-height: 25px;
                     }
-                    .active {
-                        font-weight: bold;
-                        &:after {
-                            content: "";
-                            display: block;
-                            width: 50%;
-                            padding-top: 8px;
-                            border-bottom: 3px solid #C61D20;
+                    @media (min-width: $screen_sm) {
+                        li+li {
+                            margin-left: 57px;
                         }
-                    }
-                    li+li {
-                        margin-left: 57px;
+                        .active {
+                            font-weight: bold;
+                            &:after {
+                                content: "";
+                                display: block;
+                                width: 50%;
+                                padding-top: 8px;
+                                border-bottom: 3px solid #C61D20;
+                            }
+                        }
                     }
                 }
                 #menu_toggle {
@@ -145,14 +150,17 @@
                         opacity: 0;
                         &:checked~.menu_btn>span {
                             transform: rotate(45deg);
+                            background-color: $main_brand_color;
                         }
                         &:checked~.menu_btn>span::before {
                             top: 0;
                             transform: rotate(0);
+                            background-color: $main_brand_color;
                         }
                         &:checked~.menu_btn>span::after {
                             top: 0;
                             transform: rotate(90deg);
+                            background-color: $main_brand_color;
                         }
                         &:checked~.menu_box {
                             visibility: visible;
@@ -200,28 +208,41 @@
                         position: fixed;
                         visibility: hidden;
                         top: 0;
-                        left: -100%;
-                        width: 300px;
-                        height: 100%;
-                        margin: 0;
-                        padding: 80px 0;
-                        list-style: none;
-                        background-color: #ECEFF1;
-                        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-                        transition-duration: .25s;
+                        left: 100%;
+                        width: 100%;
+                        // height: 239px;
+                        margin-left: 30%;
+                        background: #FFFFFF;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        border-radius: 0 0 0 10px;
+                        transition-duration: .4s;
+                        padding: 52px 55px 36px;
                     }
                     .menu_item {
-                        display: block;
-                        padding: 12px 24px;
-                        color: #333;
-                        font-family: 'Roboto', sans-serif;
-                        font-size: 20px;
+                        display: inline-block;
+                        // padding: 12px 24px;
+                        // color: #333;
+                        // font-size: 20px;
+                        // font-weight: 600;
+                        // text-decoration: none;
                         font-weight: 600;
-                        text-decoration: none;
+                        font-size: 16px;
+                        line-height: 21px;
+                        color: #000000;
                         transition-duration: .25s;
+                        // margin-left: 0;
+                        margin-bottom: 16px;
                     }
-                    .menu_item:hover {
-                        background-color: #CFD8DC;
+                    .active {
+                        font-weight: bold;
+                        margin-bottom: 12px;
+                        &:after {
+                            content: "";
+                            display: block;
+                            width: 50%;
+                            padding-top: 4px;
+                            border-bottom: 3px solid #C61D20;
+                        }
                     }
                 }
             }
@@ -229,7 +250,7 @@
         .intro_banner {
             background: url(../assets/img/banner.jpg) no-repeat 86% 0%;
             background-size: cover;
-            height: 60vh;
+            height: 100%;
             @media (max-width: $screen_xs_max) {
                 background-position: 84% 100%;
             }
@@ -243,9 +264,9 @@
                 color: #000;
                 flex-direction: column;
                 justify-content: space-between;
-                @media (max-width: $screen_md_max) {
+                @media (max-width: $screen_xs_max) {
                     align-items: center;
-                    height: 40vh;
+                    height: 278px;
                 }
                 &__title {
                     margin-top: 3vh;
@@ -1005,8 +1026,8 @@
         background: #13366C;
         .section_title {
             color: #fff;
-            max-width: 150px;
-            @media (max-width: $screen_xl) {
+            // max-width: 150px;
+            @media (min-width: $screen_sm) {
                 margin-left: 100px;
             }
             @media (max-width: $screen_xs_max) {
@@ -1014,26 +1035,28 @@
             }
         }
         .faq_area_item {
-            display: flex;
-            justify-content: space-between;
-            background: #FFFFFF;
-            border-radius: 10px;
-            padding: 12px 27px;
-            max-width: 642px;
-            width: 100%;
-            font-size: 18px;
-            line-height: 25px;
-            color: #13366C;
             &+.faq_area_item {
                 margin-top: 20px;
             }
-            img {
-                margin-left: 8px;
-            }
-            @media (max-width: $screen_xs_max) {
-                padding: 12px 20px;
-                font-size: 16px;
-                line-height: 21px;
+            .toggle {
+                display: flex;
+                justify-content: space-between;
+                background: #FFFFFF;
+                border-radius: 10px;
+                padding: 12px 27px;
+                max-width: 642px;
+                width: 100%;
+                font-size: 18px;
+                line-height: 25px;
+                color: #13366C;
+                img {
+                    margin-left: 8px;
+                }
+                @media (max-width: $screen_xs_max) {
+                    padding: 12px 20px;
+                    font-size: 16px;
+                    line-height: 21px;
+                }
             }
         }
         @media (min-width: $screen_lg) {
@@ -1045,6 +1068,17 @@
                 }
             }
         }
+        // --------------------------------
+        .accordion {
+            list-style: none;
+            padding: 0;
+            .inner {
+                // padding-left: 1em;
+                overflow: hidden;
+                display: none;
+            }
+        }
+        // --------------------------------
     }
     
     // ========================================================== / section_FAQ =================
@@ -1148,7 +1182,7 @@
                         }
                     }
                     li {
-                        width: 200px;
+                        max-width: 200px;
                         font-weight: bold;
                         font-size: 18px;
                         color: #FFFFFF;
