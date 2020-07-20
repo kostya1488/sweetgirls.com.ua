@@ -1035,6 +1035,7 @@
             }
         }
         .faq_area_item {
+            max-width: 642px;
             &+.faq_area_item {
                 margin-top: 20px;
             }
@@ -1044,7 +1045,6 @@
                 background: #FFFFFF;
                 border-radius: 10px;
                 padding: 12px 27px;
-                max-width: 642px;
                 width: 100%;
                 font-size: 18px;
                 line-height: 25px;
@@ -1072,9 +1072,30 @@
         .accordion {
             list-style: none;
             padding: 0;
+            .toggle {
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.11);
+                img {
+                    transition: .3s;
+                }
+            }
+            .toggle_active {
+                position: relative;
+                z-index: 15;
+                img {
+                    transform: rotate(180deg);
+                }
+            }
             .inner {
+                position: relative;
+                top: -10px;
                 overflow: hidden;
                 display: none;
+                background: #FFFFFF;
+                border-radius: 0px 0px 10px 10px;
+                padding: 32px 20px 22px;
+                font-size: 16px;
+                line-height: 21px;
+                color: rgba(73, 73, 73, 0.7);
             }
         }
         // --------------------------------

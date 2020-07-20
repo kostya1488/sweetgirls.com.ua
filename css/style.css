@@ -810,26 +810,27 @@ a {
     @media (max-width: 575px) {
       .section_FAQ .section_title {
         margin-bottom: 26px; } }
-  .section_FAQ .faq_area_item + .faq_area_item {
-    margin-top: 20px; }
-  .section_FAQ .faq_area_item .toggle {
-    display: flex;
-    justify-content: space-between;
-    background: #FFFFFF;
-    border-radius: 10px;
-    padding: 12px 27px;
-    max-width: 642px;
-    width: 100%;
-    font-size: 18px;
-    line-height: 25px;
-    color: #13366C; }
-    .section_FAQ .faq_area_item .toggle img {
-      margin-left: 8px; }
-    @media (max-width: 575px) {
-      .section_FAQ .faq_area_item .toggle {
-        padding: 12px 20px;
-        font-size: 16px;
-        line-height: 21px; } }
+  .section_FAQ .faq_area_item {
+    max-width: 642px; }
+    .section_FAQ .faq_area_item + .faq_area_item {
+      margin-top: 20px; }
+    .section_FAQ .faq_area_item .toggle {
+      display: flex;
+      justify-content: space-between;
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 12px 27px;
+      width: 100%;
+      font-size: 18px;
+      line-height: 25px;
+      color: #13366C; }
+      .section_FAQ .faq_area_item .toggle img {
+        margin-left: 8px; }
+      @media (max-width: 575px) {
+        .section_FAQ .faq_area_item .toggle {
+          padding: 12px 20px;
+          font-size: 16px;
+          line-height: 21px; } }
   @media (min-width: 992px) {
     .section_FAQ .section_FAQ_wrap {
       display: flex; }
@@ -839,9 +840,26 @@ a {
   .section_FAQ .accordion {
     list-style: none;
     padding: 0; }
+    .section_FAQ .accordion .toggle {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.11); }
+      .section_FAQ .accordion .toggle img {
+        transition: .3s; }
+    .section_FAQ .accordion .toggle_active {
+      position: relative;
+      z-index: 15; }
+      .section_FAQ .accordion .toggle_active img {
+        transform: rotate(180deg); }
     .section_FAQ .accordion .inner {
+      position: relative;
+      top: -10px;
       overflow: hidden;
-      display: none; }
+      display: none;
+      background: #FFFFFF;
+      border-radius: 0px 0px 10px 10px;
+      padding: 32px 20px 22px;
+      font-size: 16px;
+      line-height: 21px;
+      color: rgba(73, 73, 73, 0.7); }
 
 .section_contacts {
   padding: 0;
